@@ -1,11 +1,81 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
 
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #ffff; /* Black fallback color */
+    background-color: rgba(81,56,50, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+#hamburger {
+  position: fixed!important;
+  padding-left: 30px;
+}
+
+#menu {
+
+    width: 35px;
+    height: 5px;
+    background-color: #FCDDF2;
+    margin: 6px 0;
+    z-index: 999;
+}
+
 
 #logo {
   width:60%;
   height: 150px;
-  margin-right: 2%;
 }
 
 
@@ -114,49 +184,17 @@ div.circleBehind a:hover:after
   padding-bottom: 30px;
 }
 
-#thirdContainer{
-  width:25%;
-  float:left;
-  flex-wrap: wrap;
-  display: flex;
-  margin-left: 5.5%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 20px;
-  box-shadow: 20px 20px 30px -6px black;
-}
-#fourthContainer{
-  width:25%;
-  float: left;
-  flex-wrap: wrap;
-  display: flex;
-  margin-left: 7%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 20px;
-  box-shadow: 20px 20px 30px -6px black;
-}
-#fifthContainer{
-  display: flex;
-  flex-wrap: wrap;
-  width:25%;
-  float: left;
-  margin-left: 7%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 20px;
-  box-shadow: 20px 20px 30px -6px black;
-}
+
 
 .img-responsive {
 display:block center;
-max-width: 85%;
+max-width: 80%;
 height: auto;
 border-radius: 20px;
 margin-bottom: 20px;
-
-
 }
+
+
 
 .row,{
       background: linear-gradient(to right bottom, #FAF6F6, #CF8E80 75%);
@@ -164,4 +202,46 @@ margin-bottom: 20px;
       box-shadow: 20px 20px 30px -6px black;
       margin-bottom:30px;
       font: 20px Raleway;
+}
+
+@media screen and (max-width: 600px) {
+.row {
+  display:grid;
+}
+#navv{
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+}
+
+
+
+@media screen and (max-width: 768px){
+  .row {
+    display:grid;
+  }
+}
+
+@media screen and (max-width: 480px) {
+#nav {
+width:60%;
+padding-bottom: 10px;
+padding-top: 5px;
+padding-left: 35px;
+}
+
+#navv {
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+
+#logo {
+  width:100%;
+  height: 150px;
+}
+#navLinks{
+  display:grid;
+}
 }

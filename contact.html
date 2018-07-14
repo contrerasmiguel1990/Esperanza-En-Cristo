@@ -12,11 +12,33 @@
      </head>
 <body>
 
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Overlay content -->
+    <div id='overlay'>
+      <a href="Esperanza.html">INICIO</a>
+      <a href="videos.html">VIDEOS</a>
+      <a href="resources.html">RECURSOS</a>
+      <a href='mas.html'>MAS</a>
+      <a href="contact.html">CONTACTANOS</a>
+    </div>
+
+  </div>
+
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <span id="hamburger" onclick="openNav()">
+    <div id="menu" class=""></div>
+    <div id="menu" class=""></div>
+  <div id="menu" class=""></div> </span>
+
 <!-- Main menu  -->
 
   <div id="navv" class="container blue circleBehind">
     <img id="logo" src="img/logo.png" class='responsive'>
-    <div>
+    <div id="navLinks">
     <a href="Esperanza.html">INICIO</a>
     <a href="videos.html">VIDEOS</a>
     <a href="resources.html">RECURSOS</a>
