@@ -322,3 +322,15 @@ padding-top: 5px;
       padding-top: 5px;
     }
 }
+
+
+footer
+{
+    font-family: Raleway;
+    font-size: 15px;
+    text-indent: inherit;
+    margin: 0 auto;
+	padding: .7em .4em;
+	text-align: center;
+    background: #FAF6F6;
+}
