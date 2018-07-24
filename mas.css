@@ -38,7 +38,7 @@
 
     width: 35px;
     height: 5px;
-    background-color: #FCDDF2;
+    background-color: grey;
     margin: 6px 0;
 }
 
@@ -226,12 +226,23 @@ body {
   }
 
 
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+      }
+  }
+
   @media screen and (max-width: 480px) {
   #navv {
     padding-bottom: 10px;
     padding-top: 5px;
   padding-left: 35px;
   padding-top: 5px;
+
   }
 
   #logo {
@@ -250,6 +261,7 @@ body {
         padding-top: 5px;
       }
   }
+
 
   footer
   {

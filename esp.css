@@ -8,6 +8,7 @@ border-radius: 20px;
 box-shadow: 20px 20px 30px -6px black;
 padding-top:20px;
 padding-bottom: 60px;
+z-index: 1;
 
 }
 
@@ -39,14 +40,14 @@ padding-bottom: 60px;
 
     width: 35px;
     height: 5px;
-    background-color: #FCDDF2;
+    background-color: grey;
     margin: 6px 0;
-    z-index: 999;
 }
 
 #hamburger {
   position: fixed!important;
   padding-left: 30px;
+  z-index: 999;
 }
 
 /* The Overlay (background) */
@@ -55,7 +56,7 @@ padding-bottom: 60px;
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 999; /* Sit on top */
     left: 0;
     top: 0;
     background-color: #ffff; /* Black fallback color */
@@ -112,6 +113,7 @@ padding-bottom: 60px;
   padding-top: 5px;
 padding-left: 35px;
 padding-top: 5px;
+z-index: 1;
 
 }
 
@@ -129,6 +131,7 @@ padding-top: 5px;
     #navv{
       padding-bottom: 10px;
       padding-top: 5px;
+      z-index: 1;
     }
 }
 
